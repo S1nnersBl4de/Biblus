@@ -1,0 +1,26 @@
+<div class="body">
+    <app-header></app-header>
+
+    <div class="container">
+        <div class="content">
+            <div class="left">
+                <div class="text">
+                    <h1>{{author.fullname}}</h1>
+                    <span class="info">{{author.year_start}}</span>
+                    <span class="info">{{author.country}}</span>
+                </div>
+            </div>
+
+            <div class="center">
+                <img [src]="author.img" alt="">
+            </div>
+
+            <div class="description">
+                <h2>ავტორის შესახებ</h2>
+                <span class="desc-text">{{author.description}}</span>
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>

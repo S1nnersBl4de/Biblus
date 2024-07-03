@@ -1,0 +1,34 @@
+<div class="background">
+    <app-header></app-header>
+
+    <div class="blogcontainer">
+       
+        <div class="cardscontainer">
+          <div class="cards" (click)="viewBlog(info.id)" *ngFor="let info of blogs" >
+              <div class="imgdiv">
+                  <img  [src]="info?.image" alt="">
+      
+              </div>
+              <div class="contentdiv">
+                  <h1>{{info?.title}}</h1>
+                  <p>{{ info?.text | truncate: 40 }}</p>
+      
+                  <div class="time">
+                    <p class="time">{{info?.created_at}} <a href=""><fa-icon [icon]="icon" class="clockicon"></fa-icon></a> </p>
+                    
+                 </div>
+              </div>
+      
+          </div>
+        </div>
+      
+          
+      
+          
+      </div>
+
+      <app-footer></app-footer>
+
+
+
+</div>

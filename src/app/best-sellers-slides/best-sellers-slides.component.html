@@ -1,0 +1,44 @@
+<div class="bestsellers">
+    <div class="left">
+        <div class="h1">
+            <h1>ბესტსელერები</h1>
+            <p>ყველაზე გაყიდვადი, მომხმარებლის რჩეული წიგნები</p>
+        </div>
+        
+        <div class="showall">
+            <button><a routerLink="/bestsellers">მაჩვენე ყველა</a></button>
+        </div>
+
+        <div class="lazyman">
+            <img src="https://biblusi.ge/_nuxt/img/boyreadsbook.aac5d56.png" alt="">
+        </div>
+
+    </div>
+    <div class="right">
+        <swiper-container class="mySwiper"  effect="coverflow" grab-cursor="true" centered-slides="true"
+    slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+    coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+    <swiper-slide *ngFor="let data of slides2">
+        <div class="card" (click)="goToBookDetail(data.id)" >
+            <div class="first-content">
+                <img [src]="data?.min_picture" alt="" />
+                <div class="insidecontent">
+                    <h1>{{data?.name}}</h1>
+                    <p><a href="">Rating: {{data?.rate}}</a></p>
+                    <p class="value">{{data?.p}}₾</p>
+                </div>
+            </div>
+        </div>
+    </swiper-slide>
+    
+    
+  </swiper-container>
+    </div>
+    
+</div>
+
+
+
+
+
+

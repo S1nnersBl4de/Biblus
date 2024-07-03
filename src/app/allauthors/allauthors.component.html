@@ -1,0 +1,25 @@
+<div class="background">
+  <app-header></app-header>
+
+  <div class="blogcontainer">
+    <div class="cardscontainer">
+      <div class="cards" (click)= "viewauthor(author.id)" *ngFor="let author of authors" >
+        <div class="imgdiv">
+          <img [src]="author.img" alt="{{ author.fullname }}">
+        </div>
+        <div class="contentdiv">
+          <h1>{{ author.fullname }}</h1>
+          <p>{{ author.description | truncate: 95 }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <p-paginator [rows]="pageSize" [totalRecords]="totalRecords" (onPageChange)="onPageChange($event)"></p-paginator>
+    </div>
+
+    
+  </div>
+
+  <app-footer></app-footer>
+</div>

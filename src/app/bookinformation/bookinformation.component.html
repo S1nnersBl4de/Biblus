@@ -1,0 +1,59 @@
+<div class="body">
+
+
+ <app-header></app-header>
+ 
+ <div class="toplayer">
+    <div class="content">
+     
+      <div class="leftdiv">
+        <img [src]="book.pictures[0]" alt="Book Image">
+      </div>
+   
+      
+      <div class="centerdiv">
+        <div class="divcontent">
+          <div class="text1">
+            <h1>{{ book.name }}</h1>
+            <h2>Rating: {{book.rate}}</h2>
+           
+          </div>
+          <div class="text2">
+            <p>{{ book.description | truncate: 10000 }}</p>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="rightdiv">
+        <div class="buycard">
+          <div class="card">
+            <div class="stockdiv">
+              <p>✅ მარაგშია</p>
+            </div>
+            <div class="price">
+              <p>{{  book.variations[0]?.price }} ₾</p>
+            </div>
+            <div class="buyinfo">
+              <span>მიტანის ღირებულება</span>
+              <p>თბილისი - 4 ლარი / რეგიონი - 6.00 ლარი</p>
+              <p>მიწოდება:</p>
+              <p>*თბილისი: შეძენიდან 2-3 სამუშაო დღე;</p>
+              <p>*რეგიონები: შეძენიდან 4-5 სამუშაო დღე:</p>
+            </div>
+            <div class="buttons">
+              <button>ყიდვა</button>
+            </div>
+            <div class="bankicons">
+              <img src="https://biblusi.ge/_nuxt/img/tbc2.922c599.png" alt="">
+              <img src="https://biblusi.ge/_nuxt/img/bog.da74165.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<app-footer></app-footer>
+
+</div>

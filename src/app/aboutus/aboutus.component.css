@@ -1,0 +1,20 @@
+.container {
+    
+    margin: 0 auto;
+    padding: 110px;
+}
+
+.georgian-text {
+    font-family: "BPG Mrgvlovani Caps", serif;
+    font-size: 18px;
+    color: rgb(49, 49, 49);
+    line-height: 1.6;
+    padding-bottom: 20px; 
+}
+
+.english-text {
+    font-size: 16px;
+    color: #bcbbbb; 
+    line-height: 1.6;
+    padding-bottom: 20px; 
+}

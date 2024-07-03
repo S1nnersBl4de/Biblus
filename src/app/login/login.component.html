@@ -1,0 +1,23 @@
+<div class="login-container">
+    <div class="left-section">
+      <h1>წაიკითხე წიგნები, უკეთესად იქნები</h1>
+      <img src="https://biblusi.ge/_nuxt/img/bookPic.5d5b9f2.svg" alt="Books Image">
+    </div>
+    <div class="right-section">
+      <div class="login-form">
+        <h2>ავტორიზაცია</h2>
+        <form (ngSubmit)="onLogin()">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" [(ngModel)]="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" [(ngModel)]="password" name="password" required>
+          </div>
+          <button type="submit">Log In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
